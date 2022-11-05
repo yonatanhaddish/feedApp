@@ -1,1 +1,2 @@
 This is first statement on test.txt file.
+This is the second statement on test.txt file after a while.

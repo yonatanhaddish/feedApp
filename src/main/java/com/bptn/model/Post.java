@@ -20,7 +20,7 @@ public class Post {
 	private String post;
 	
 	@Column(name = "\"usernameKey\"")
-	private String usernameKey;
+	private String username;
 	
 	
 	public Post() {
@@ -33,7 +33,7 @@ public class Post {
 		this.postID = postID;
 		this.postType = postType;
 		this.post = post;
-		this.usernameKey = usernameKey;
+		this.username = usernameKey;
 	}
 	
 	public String getPostID() {
@@ -58,10 +58,10 @@ public class Post {
 	}
 	
 	public String getUserNameKey() {
-		return this.usernameKey;
+		return this.username;
 	}
 	public void setUserNameKey(String usernameKey) {
-		this.usernameKey = usernameKey;
+		this.username = usernameKey;
 	}
 
 }
