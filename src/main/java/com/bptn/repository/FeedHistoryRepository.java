@@ -2,6 +2,8 @@ package com.bptn.repository;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +18,7 @@ public interface FeedHistoryRepository extends JpaRepository<History, String> {
 	
 	List<History> findByPostType(String postType);
 	
+	@Transactional
 	void deleteByPostType(String postType);
 
 }
