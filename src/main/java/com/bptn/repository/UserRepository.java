@@ -11,7 +11,10 @@ import com.bptn.model.UserID;
 @Repository
 public interface UserRepository extends JpaRepository<UserID, String> {
 	
-	@Query(value = "SELECT * FROM \"UserID\" WHERE username = ?1", nativeQuery=true)
-	List<UserID> findbyUsername(String username);
+//	@Query(value = "SELECT * FROM \"UserID\" WHERE username = ?1", nativeQuery=true)
+//	List<UserID> findbyUsername(String username);
+	
+	@Query(value = "select * from public.\"UserID\" where username=?1", nativeQuery = true)
+	UserID findByUsername(String username);
 
 }
